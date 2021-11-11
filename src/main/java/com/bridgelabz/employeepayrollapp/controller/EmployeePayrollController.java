@@ -16,12 +16,18 @@ public class EmployeePayrollController {
 
     @GetMapping("/get/{empId}")
     public ResponseEntity<String> getEmployeeDataById(@PathVariable int empId) {
-        return new ResponseEntity<String>("Get call Succeed for id : " + empId, HttpStatus.OK);
+        return new ResponseEntity<String>("Get call Succeed for name : " + empId, HttpStatus.OK);
+    // GET http://localhost:8080/employeepayrollservice/get/3
     }
+
 
     @PostMapping("/create")
     public ResponseEntity<String> addEmployeePayrollData(@RequestBody EmployeeDto employeeDto) {
         return new ResponseEntity<String>("created Employee Payroll Data for : " + employeeDto.toString(), HttpStatus.OK);
+    /*
+    POST http://localhost:8080/employeepayrollservice/create
+    Body- raw (JSON)- {"empName":"Shubham","salary":"2000"}
+     */
     }
 
     @PutMapping("/update")
@@ -30,7 +36,7 @@ public class EmployeePayrollController {
     }
 
     @DeleteMapping("/delete/{empId}")
-    public ResponseEntity<String> deleteEmployeePayrollData(@PathVariable int empId) {
+    public ResponseEntity<String> deleteEmployeePayrollData(@PathVariable String empId) {
         return new ResponseEntity<String>("deleted Employee Payroll Data for : " + empId, HttpStatus.OK);
     }
 
