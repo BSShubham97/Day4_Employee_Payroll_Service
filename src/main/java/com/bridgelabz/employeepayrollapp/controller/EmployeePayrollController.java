@@ -14,9 +14,9 @@ public class EmployeePayrollController {
         return new ResponseEntity<String>("Get Call Success", HttpStatus.OK);
     }
 
-    @GetMapping("/get/{empId}")
+    @GetMapping ("/get/{empId}")
     public ResponseEntity<String> getEmployeeDataById(@PathVariable int empId) {
-        return new ResponseEntity<String>("Get call Succeed for name : " + empId, HttpStatus.OK);
+        return new ResponseEntity<String>("Get call Succeed for Id : " + empId, HttpStatus.OK);
     // GET http://localhost:8080/employeepayrollservice/get/3
     }
 
