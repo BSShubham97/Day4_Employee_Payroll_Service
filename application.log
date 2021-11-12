@@ -29,3 +29,185 @@
 2021-11-13 00:20:28.218  INFO 12096 --- [restartedMain] c.b.e.EmployeePayrollApplication         : EMPLOYEE PAYROLL STARTED !!! in DEV ENVIRONMENT
 2021-11-13 00:20:28.220  INFO 12096 --- [restartedMain] c.b.e.EmployeePayrollApplication         : EMPLOYEE_PAYROLL_DATABASE USER IS payrolluser 
 2021-11-13 00:21:04.292 DEBUG 12096 --- [http-nio-8080-exec-1] c.b.e.c.EmployeePayrollController        : Employee DTO: EmployeePayrollDto(empName=Liten, salary=2000, gender=male, startDate=2021-11-12, note=All in one, departments=[Admin, Sales], profilePic=Rajnikanth.jpeg)
+2021-11-13 00:34:53.318  INFO 11772 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 15.0.2 on SHUBHAM-SUNIL-BANDAGALE with PID 11772 (F:\Spring_Learning\Day4_Spring_Employee_Payroll_Service\target\classes started by ADMIN in F:\Spring_Learning\Day4_Spring_Employee_Payroll_Service)
+2021-11-13 00:34:53.323 DEBUG 11772 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Running with Spring Boot v2.5.6, Spring v5.3.12
+2021-11-13 00:34:53.324  INFO 11772 --- [restartedMain] c.b.e.EmployeePayrollApplication         : The following profiles are active: dev
+2021-11-13 00:34:56.802  WARN 11772 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-13 00:34:57.312  INFO 11772 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 5.291 seconds (JVM running for 8.548)
+2021-11-13 00:34:57.317  INFO 11772 --- [restartedMain] c.b.e.EmployeePayrollApplication         : EMPLOYEE PAYROLL STARTED !!! in DEV ENVIRONMENT
+2021-11-13 00:34:57.320  INFO 11772 --- [restartedMain] c.b.e.EmployeePayrollApplication         : EMPLOYEE_PAYROLL_DATABASE USER IS payrolluser 
+2021-11-13 00:35:30.278  WARN 11772 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.employeepayrollapp.dto.ResponseDto> com.bridgelabz.employeepayrollapp.controller.EmployeePayrollController.createEmployeePayrollData(com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDto): [Field error in object 'employeePayrollDto' on field 'gender': rejected value [m]; codes [Pattern.employeePayrollDto.gender,Pattern.gender,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDto.gender,gender]; arguments []; default message [gender],[Ljavax.validation.constraints.Pattern$Flag;@3fdcf3fe,male|female|third]; default message [INVALID ENTRY FOR GENDER !!! ]] ]
+2021-11-13 00:35:38.151  WARN 11772 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.employeepayrollapp.dto.ResponseDto> com.bridgelabz.employeepayrollapp.controller.EmployeePayrollController.createEmployeePayrollData(com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDto) with 2 errors: [Field error in object 'employeePayrollDto' on field 'gender': rejected value [m]; codes [Pattern.employeePayrollDto.gender,Pattern.gender,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDto.gender,gender]; arguments []; default message [gender],[Ljavax.validation.constraints.Pattern$Flag;@3fdcf3fe,male|female|third]; default message [INVALID ENTRY FOR GENDER !!! ]] [Field error in object 'employeePayrollDto' on field 'startDate': rejected value [2221-11-12]; codes [PastOrPresent.employeePayrollDto.startDate,PastOrPresent.startDate,PastOrPresent]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDto.startDate,startDate]; arguments []; default message [startDate]]; default message [startDate should be past or today's date !!! ]] ]
+2021-11-13 00:35:54.271  WARN 11772 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.employeepayrollapp.dto.ResponseDto> com.bridgelabz.employeepayrollapp.controller.EmployeePayrollController.createEmployeePayrollData(com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDto) with 3 errors: [Field error in object 'employeePayrollDto' on field 'startDate': rejected value [2221-11-12]; codes [PastOrPresent.employeePayrollDto.startDate,PastOrPresent.startDate,PastOrPresent]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDto.startDate,startDate]; arguments []; default message [startDate]]; default message [startDate should be past or today's date !!! ]] [Field error in object 'employeePayrollDto' on field 'gender': rejected value [m]; codes [Pattern.employeePayrollDto.gender,Pattern.gender,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDto.gender,gender]; arguments []; default message [gender],[Ljavax.validation.constraints.Pattern$Flag;@3fdcf3fe,male|female|third]; default message [INVALID ENTRY FOR GENDER !!! ]] [Field error in object 'employeePayrollDto' on field 'profilePic': rejected value []; codes [NotBlank.employeePayrollDto.profilePic,NotBlank.profilePic,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDto.profilePic,profilePic]; arguments []; default message [profilePic]]; default message [PLEASE ADD A PROFILE PICTURE !!!]] ]
+2021-11-13 00:36:17.330 DEBUG 11772 --- [http-nio-8080-exec-8] c.b.e.c.EmployeePayrollController        : Employee DTO: EmployeePayrollDto(empName=Liten, salary=2000, gender=male, startDate=2021-11-12, note=All in one, departments=[Admin, Sales], profilePic=narayn.jpg)
+2021-11-13 00:51:40.870  INFO 8064 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 15.0.2 on SHUBHAM-SUNIL-BANDAGALE with PID 8064 (F:\Spring_Learning\Day4_Spring_Employee_Payroll_Service\target\classes started by ADMIN in F:\Spring_Learning\Day4_Spring_Employee_Payroll_Service)
+2021-11-13 00:51:40.873 DEBUG 8064 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Running with Spring Boot v2.5.6, Spring v5.3.12
+2021-11-13 00:51:40.874  INFO 8064 --- [restartedMain] c.b.e.EmployeePayrollApplication         : The following profiles are active: dev
+2021-11-13 00:51:45.575  WARN 8064 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-13 00:51:46.104  INFO 8064 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 6.265 seconds (JVM running for 8.267)
+2021-11-13 00:51:46.109  INFO 8064 --- [restartedMain] c.b.e.EmployeePayrollApplication         : EMPLOYEE PAYROLL STARTED !!! in DEV ENVIRONMENT
+2021-11-13 00:51:46.111  INFO 8064 --- [restartedMain] c.b.e.EmployeePayrollApplication         : EMPLOYEE_PAYROLL_DATABASE USER IS payrolluser 
+2021-11-13 00:51:55.260 ERROR 8064 --- [http-nio-8080-exec-1] .b.e.e.EmployeePayrollExceptionalHandler : INVALID DATE FORMAT !!
+
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "12/2021": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '12/2021' could not be parsed at index 2; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String "12/2021": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '12/2021' could not be parsed at index 2
+ at [Source: (PushbackInputStream); line: 1, column: 64] (through reference chain: com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDto["startDate"])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:389) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:342) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String "12/2021": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '12/2021' could not be parsed at index 2
+ at [Source: (PushbackInputStream); line: 1, column: 64] (through reference chain: com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDto["startDate"])
+	at com.fasterxml.jackson.databind.exc.InvalidFormatException.from(InvalidFormatException.java:67) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.weirdStringException(DeserializationContext.java:1851) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleWeirdStringValue(DeserializationContext.java:1079) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.datatype.jsr310.deser.JSR310DeserializerBase._handleDateTimeException(JSR310DeserializerBase.java:176) ~[jackson-datatype-jsr310-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer._fromString(LocalDateDeserializer.java:166) ~[jackson-datatype-jsr310-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer.deserialize(LocalDateDeserializer.java:91) ~[jackson-datatype-jsr310-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer.deserialize(LocalDateDeserializer.java:37) ~[jackson-datatype-jsr310-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.deser.impl.FieldProperty.deserializeAndSet(FieldProperty.java:138) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:402) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:195) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:322) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4593) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3601) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:378) ~[spring-web-5.3.12.jar:5.3.12]
+	... 51 common frames omitted
+Caused by: java.time.format.DateTimeParseException: Text '12/2021' could not be parsed at index 2
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2051) ~[na:na]
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1953) ~[na:na]
+	at java.base/java.time.LocalDate.parse(LocalDate.java:429) ~[na:na]
+	at com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer._fromString(LocalDateDeserializer.java:164) ~[jackson-datatype-jsr310-2.12.5.jar:2.12.5]
+	... 60 common frames omitted
+
+2021-11-13 00:51:55.307  WARN 8064 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "12/2021": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '12/2021' could not be parsed at index 2; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String "12/2021": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '12/2021' could not be parsed at index 2<LF> at [Source: (PushbackInputStream); line: 1, column: 64] (through reference chain: com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDto["startDate"])]
+2021-11-13 00:52:11.838  WARN 8064 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.employeepayrollapp.dto.ResponseDto> com.bridgelabz.employeepayrollapp.controller.EmployeePayrollController.createEmployeePayrollData(com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDto): [Field error in object 'employeePayrollDto' on field 'startDate': rejected value [2021-12-12]; codes [PastOrPresent.employeePayrollDto.startDate,PastOrPresent.startDate,PastOrPresent]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDto.startDate,startDate]; arguments []; default message [startDate]]; default message [startDate should be past or today's date !!! ]] ]
+2021-11-13 00:52:28.486 ERROR 8064 --- [http-nio-8080-exec-6] .b.e.e.EmployeePayrollExceptionalHandler : INVALID DATE FORMAT !!
+
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "12 NOV 2021": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '12 NOV 2021' could not be parsed at index 3; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String "12 NOV 2021": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '12 NOV 2021' could not be parsed at index 3
+ at [Source: (PushbackInputStream); line: 1, column: 64] (through reference chain: com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDto["startDate"])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:389) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:342) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.12.jar:5.3.12]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.54.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.12.jar:5.3.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String "12 NOV 2021": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '12 NOV 2021' could not be parsed at index 3
+ at [Source: (PushbackInputStream); line: 1, column: 64] (through reference chain: com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDto["startDate"])
+	at com.fasterxml.jackson.databind.exc.InvalidFormatException.from(InvalidFormatException.java:67) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.weirdStringException(DeserializationContext.java:1851) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleWeirdStringValue(DeserializationContext.java:1079) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.datatype.jsr310.deser.JSR310DeserializerBase._handleDateTimeException(JSR310DeserializerBase.java:176) ~[jackson-datatype-jsr310-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer._fromString(LocalDateDeserializer.java:166) ~[jackson-datatype-jsr310-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer.deserialize(LocalDateDeserializer.java:91) ~[jackson-datatype-jsr310-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer.deserialize(LocalDateDeserializer.java:37) ~[jackson-datatype-jsr310-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.deser.impl.FieldProperty.deserializeAndSet(FieldProperty.java:138) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:402) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:195) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:322) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4593) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3601) ~[jackson-databind-2.12.5.jar:2.12.5]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:378) ~[spring-web-5.3.12.jar:5.3.12]
+	... 51 common frames omitted
+Caused by: java.time.format.DateTimeParseException: Text '12 NOV 2021' could not be parsed at index 3
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2051) ~[na:na]
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1953) ~[na:na]
+	at java.base/java.time.LocalDate.parse(LocalDate.java:429) ~[na:na]
+	at com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer._fromString(LocalDateDeserializer.java:164) ~[jackson-datatype-jsr310-2.12.5.jar:2.12.5]
+	... 60 common frames omitted
+
+2021-11-13 00:52:28.490  WARN 8064 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "12 NOV 2021": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '12 NOV 2021' could not be parsed at index 3; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String "12 NOV 2021": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '12 NOV 2021' could not be parsed at index 3<LF> at [Source: (PushbackInputStream); line: 1, column: 64] (through reference chain: com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDto["startDate"])]
+2021-11-13 00:52:45.993 DEBUG 8064 --- [http-nio-8080-exec-8] c.b.e.c.EmployeePayrollController        : Employee DTO: EmployeePayrollDto(empName=Liten, salary=2000, gender=male, startDate=2021-11-12, note=All in one, departments=[Admin, Sales], profilePic=narayn.jpg)
