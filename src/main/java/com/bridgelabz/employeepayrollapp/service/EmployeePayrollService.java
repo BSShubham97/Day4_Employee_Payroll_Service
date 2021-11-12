@@ -1,11 +1,14 @@
 package com.bridgelabz.employeepayrollapp.service;
 
 import com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDto;
+import com.bridgelabz.employeepayrollapp.exceptions.EmployeePayrollException;
 import com.bridgelabz.employeepayrollapp.model.EmployeePayrollData;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static javax.swing.UIManager.get;
 
 @Service
 public class EmployeePayrollService implements IEmployeePayrollService {
@@ -18,7 +21,11 @@ public class EmployeePayrollService implements IEmployeePayrollService {
 
 
     public EmployeePayrollData getEmployeePayrollDataById(int empId) {
-        return employeePayrolltList.get(empId - 1);
+
+        return employeePayrolltList.stream()
+                .filter(empData -> empData.getEmpId() == empId)
+                .findFirst()
+                .orElseThrow(() -> new EmployeePayrollException("EMPLOYEE NOT FOUND / PRESENT"));
     }
 
     public EmployeePayrollData createEmployeePayrollData(EmployeePayrollDto employeePayrollDto) {
