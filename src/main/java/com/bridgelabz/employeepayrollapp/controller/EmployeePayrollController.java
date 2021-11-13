@@ -38,11 +38,10 @@ public class EmployeePayrollController {
         // GET http://localhost:8080/employeepayrollservice/get/3
     }
 
-
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> createEmployeePayrollData(
             @Valid @RequestBody EmployeePayrollDto employeePayrollDto) {
-       log.debug("Employee DTO: "+employeePayrollDto.toString());
+        log.debug("Employee DTO: " + employeePayrollDto.toString());
         EmployeePayrollData empData = null;
         empData = employeePayrollService.createEmployeePayrollData(employeePayrollDto);
         ResponseDto respDto = new ResponseDto("CREATED EMPLOYEE DATA SUCCESSFULLY !!! ", empData);
@@ -55,7 +54,7 @@ public class EmployeePayrollController {
 
     @PutMapping("/update{empId}")
     public ResponseEntity<ResponseDto> updateEmployeePayrollData(@PathVariable("empId") int empId,
-                                                                 @Valid@RequestBody EmployeePayrollDto employeePayrollDto) {
+                                                                 @Valid @RequestBody EmployeePayrollDto employeePayrollDto) {
         EmployeePayrollData empData = null;
         empData = employeePayrollService.updateEmployeePayrollData(empId, employeePayrollDto);
         ResponseDto respDto = new ResponseDto("UPDATED EMPLOYEE DATA SUCCESSFULLY !!! ", empData);
@@ -67,6 +66,14 @@ public class EmployeePayrollController {
         employeePayrollService.deleteEmployeePayrollData(empId);
         ResponseDto responseDto = new ResponseDto("Deleted Employee Payroll Data SUCCESSFULLY !!!", "Deleted_ID =" + empId);
         return new ResponseEntity<ResponseDto>(responseDto, HttpStatus.OK);
+    }
+
+    @GetMapping("/department/{department}")
+    public ResponseEntity<ResponseDto> getEmployeePayrollData(@PathVariable("department") String department) {
+        List<EmployeePayrollData> empDataList = null;
+        empDataList = employeePayrollService.getEmployeesByDepartment(department);
+        ResponseDto respDto = new ResponseDto("GET CALL FOR ID SUCCESSFUL", empDataList);
+        return new ResponseEntity<ResponseDto>(respDto, HttpStatus.OK);
     }
 
 }

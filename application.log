@@ -227,3 +227,10 @@ Caused by: java.time.format.DateTimeParseException: Text '12 NOV 2021' could not
 2021-11-13 02:36:21.018  INFO 9968 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 4.075 seconds (JVM running for 5.155)
 2021-11-13 02:36:21.021  INFO 9968 --- [restartedMain] c.b.e.EmployeePayrollApplication         : EMPLOYEE PAYROLL STARTED !!! in DEV ENVIRONMENT
 2021-11-13 02:36:21.023  INFO 9968 --- [restartedMain] c.b.e.EmployeePayrollApplication         : EMPLOYEE_PAYROLL_DATABASE USER IS payrolluser 
+2021-11-13 10:14:47.939  INFO 15020 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 15.0.2 on SHUBHAM-SUNIL-BANDAGALE with PID 15020 (F:\Spring_Learning\Day4_Spring_Employee_Payroll_Service\target\classes started by ADMIN in F:\Spring_Learning\Day4_Spring_Employee_Payroll_Service)
+2021-11-13 10:14:47.946 DEBUG 15020 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Running with Spring Boot v2.5.6, Spring v5.3.12
+2021-11-13 10:14:47.947  INFO 15020 --- [restartedMain] c.b.e.EmployeePayrollApplication         : The following profiles are active: dev
+2021-11-13 10:14:52.430  WARN 15020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-13 10:14:52.793  INFO 15020 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 5.548 seconds (JVM running for 6.932)
+2021-11-13 10:14:52.797  INFO 15020 --- [restartedMain] c.b.e.EmployeePayrollApplication         : EMPLOYEE PAYROLL STARTED !!! in DEV ENVIRONMENT
+2021-11-13 10:14:52.798  INFO 15020 --- [restartedMain] c.b.e.EmployeePayrollApplication         : EMPLOYEE_PAYROLL_DATABASE USER IS payrolluser 

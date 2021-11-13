@@ -18,13 +18,9 @@ public class EmployeePayrollService implements IEmployeePayrollService {
     @Autowired
      private EmployeePayrollRepository employeeRepository;
 
-
-    List<EmployeePayrollData> employeePayrollList = new ArrayList<>();
-
     public List<EmployeePayrollData> getEmployeePayrollData() {
         return employeeRepository.findAll();
     }
-
 
     public EmployeePayrollData getEmployeePayrollDataById(int empId) {
 
@@ -47,10 +43,14 @@ public class EmployeePayrollService implements IEmployeePayrollService {
         return employeeRepository.save(empData);
     }
 
-
     public void deleteEmployeePayrollData(int empId) {
         EmployeePayrollData empData = this.getEmployeePayrollDataById(empId);
        employeeRepository.delete(empData);
 
+    }
+
+    @Override
+    public List<EmployeePayrollData> getEmployeesByDepartment(String department) {
+        return employeeRepository.findEmployeesDataByDepartment(department);
     }
 }
