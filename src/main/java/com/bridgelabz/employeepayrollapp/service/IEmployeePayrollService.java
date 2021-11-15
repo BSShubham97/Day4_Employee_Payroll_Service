@@ -14,9 +14,12 @@ public interface IEmployeePayrollService {
 
     EmployeePayrollData createEmployeePayrollData(EmployeePayrollDto employeePayrollDto);
 
-    EmployeePayrollData updateEmployeePayrollData(int empId, EmployeePayrollDto employeePayrollDto);
+    EmployeePayrollData updateEmployeePayrollData(String token , EmployeePayrollDto employeePayrollDto);
 
-    void deleteEmployeePayrollData(int empId);
+    String deleteEmployeePayrollData(String token);
+
+    List<EmployeePayrollData> getAllEmployeeData(String token);
 
     List<EmployeePayrollData> getEmployeesByDepartment(String department);
+
 }
